@@ -1,7 +1,7 @@
 #include "email.h"
 #include <stdio.h>
 
-#define DEFAULT_TO_EMAIL "sidrafaruqi17@gmail.com"
+#define DEFAULT_TO_EMAIL "xyz@gmail.com"
 
 int main(void) {
 
