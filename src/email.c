@@ -32,7 +32,7 @@ void sendEmail(const char *to_email, const char *subject, const char *body, cons
     curl = curl_easy_init();
 
     if (curl) {
-        const char *from = "sidrafaruqi17@gmail.com";
+        const char *from = "XYZ@gmail.com";
 
         // Construct the email payload
         char payload[4096];
@@ -64,7 +64,7 @@ void sendEmail(const char *to_email, const char *subject, const char *body, cons
 
         struct UploadStatus upload_ctx = {payload, strlen(payload)};
 
-        curl_easy_setopt(curl, CURLOPT_URL, "smtps://smtp.gmail.com:465");
+        curl_easy_setopt(curl, CURLOPT_URL, "smtps://smtp.gmail.com:xyz");
         curl_easy_setopt(curl, CURLOPT_USE_SSL, (long)CURLUSESSL_ALL);
         curl_easy_setopt(curl, CURLOPT_MAIL_FROM, from);
 
@@ -73,7 +73,7 @@ void sendEmail(const char *to_email, const char *subject, const char *body, cons
         curl_easy_setopt(curl, CURLOPT_MAIL_RCPT, recipients);
 
         curl_easy_setopt(curl, CURLOPT_USERNAME, from);
-        curl_easy_setopt(curl, CURLOPT_PASSWORD, "kwjj rnfo duqs ehwd");
+        curl_easy_setopt(curl, CURLOPT_PASSWORD, "xyz");
 
         curl_easy_setopt(curl, CURLOPT_READFUNCTION, ReadCallback);
         curl_easy_setopt(curl, CURLOPT_READDATA, &upload_ctx);
